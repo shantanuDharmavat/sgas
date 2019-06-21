@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><string-array name="flag_array">
+    <item>open</item>
+    <item>closed</item>
+    <item>modified</item>
+    <item>all</item>
+</string-array>
+
+</resources>

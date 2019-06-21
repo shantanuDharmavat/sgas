@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listViewIncidents"
+        android:id="@+id/row2">
+
+
+    </TableRow>
+
+    <TextView
+        android:text="List of Incidents"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="@color/common_plus_signin_btn_text_dark_disabled"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:id="@+id/row1"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editTextDate" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCalender"
+                android:src="@drawable/calendar_50"
+                android:background="@android:color/transparent" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/spinnerFlag"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="All"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonAllIncident"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </TableRow>
+
+    <!--<ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewIncidents"
+        android:visibility="gone"
+        android:layout_below="@+id/row1"
+        android:layout_alignParentStart="true"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/row1"/>
+
+</RelativeLayout>

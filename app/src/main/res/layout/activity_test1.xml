@@ -1,0 +1,112 @@
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout="@layout/geojson_demo"
+    >
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pop_upinflator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </ListView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_view">
+
+        <ImageButton
+            android:id="@+id/layer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:onClick="layerSwitcher"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/info_48" />
+
+        <ImageButton
+            android:id="@+id/imageViewDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/imageViewMapLayer"
+            android:layout_below="@+id/imageViewMapLayer"
+            android:background="@android:color/transparent"
+            android:onClick="layerSwitcher"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/directions"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/toggle_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imageViewDirection"
+            android:background="@android:color/transparent"
+            android:onClick="layerSwitcher"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/toggle_gps" />
+
+        <ImageButton
+            android:id="@+id/layer_stack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layer_info"
+            android:background="@android:color/transparent"
+            android:onClick="layerSwitcher"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/sheets_48" />
+
+        <ImageButton
+            android:id="@+id/imageViewMapLayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layer_stack"
+            android:background="@android:color/transparent"
+            android:onClick="layerSwitcher"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/layer_map" />
+
+        <TextView
+            android:id="@+id/textViewDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/common_plus_signin_btn_text_dark_disabled" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayoutScale"
+            android:layout_above="@+id/textViewDistance"
+            android:layout_toEndOf="@+id/imageViewDirection"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</fragment>
